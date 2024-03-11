@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
+:root {
+	--primaryColor: #de942d;
+	--secondaryColor: #a7670e;
+	--textColor: #797979;
+	--max-width: 1200px;
+	--white: #ffff;
+	--txt: #000;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Madimi One', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+a {
+	text-decoration: none;
+}
+
+.navbar {
+	max-width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	margin: auto;
+	align-items: center;
+	padding: 1rem;
+	overflow: hidden;
+	position: sticky;
+	top: 0;
+	background-color: var(--white);
+}
+
+.navbar.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.nav-container {
+	list-style: none;
+	gap: 4rem;
+	display: flex;
+	align-items: center;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.link a {
+	position: relative;
+	padding-bottom: 0.75rem;
+	color: var(--black);
+	font-weight: 500;
+	font-size: 20px;
+}
+
+.link a::after {
+	content: '';
+	position: absolute;
+	height: 2px;
+	width: 0;
+	left: 0;
+	bottom: 0;
+	background-color: var(--secondaryColor);
+	transition: 0.3s;
+}
+
+.link a:hover::after {
+	width: 50%;
+}
+
+main {
+	padding: 30px;
+	margin-top: 2.5rem;
+	overflow: auto;
+}
+
+#content {
+	float: left;
+	width: 65%;
+}
+
+h2 {
+	margin-bottom: 1rem;
+	margin-left: 10px;
+}
+
+img {
+	width: 250px;
+	height: 250px;
+	object-fit: cover;
+	object-position: center;
+	margin-left: 10px;
+	border-radius: 1rem;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	padding: 1rem;
+}
+
+.card-container {
+	padding: 20px;
+	margin-top: 20px;
+	text-align: center;
+}
+
+p {
+	margin-left: 10px;
+	font-size: 20px;
+	margin-top: 1rem;
+}
+
+h3 {
+	margin-top: 1rem;
+	font-size: 24px;
+}
+
+footer {
+	text-align: center;
+	background-color: var(--primaryColor);
+	padding: 18px;
+	color: var(--white);
+}
+
+@media screen and (max-width: 1000px) {
+	#content,
+	aside {
+		width: 100%;
+		padding: 0;
+	}
+
+	img {
+		width: 200px;
+		height: 160px;
+		padding: 10px;
+		margin: 20px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.nav-container {
+		gap: 2rem;
+	}
+}
